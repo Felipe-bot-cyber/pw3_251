@@ -5,6 +5,9 @@ import LoginPage from './views/LoginPage';
 import MainPage from './views/MainPage';
 import { Route, Routes } from 'react-router-dom';
 import UserProfileForm from './views/UserProfilePage';
+import ContactList from './views/ContactListPage';
+import AddContactPage from './views/AddContactPage';
+import Chat from './views/ChatPage';
 
 function App() {
   return (
@@ -20,11 +23,12 @@ function AuthContent() {
     <>
       {user ?
          <Routes>
-            <Route index element={<MainPage/>}/>
-            <Route path="/user-prof" element={<UserProfileForm/>}/>
-
-
-         </Routes>
+           <Route index element={<ContactList />} />
+            <Route path="/user-prof" element={<UserProfileForm />} />
+            <Route path="/add-cont"  element={<AddContactPage />} />
+            <Route path="/chat/:id"  element={<Chat />} />
+            </Routes>
+         
      
        : 
       

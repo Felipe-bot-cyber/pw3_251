@@ -6,6 +6,7 @@
   padding: 0;
   font-family: "Lora", sans-serif;
 }
+
 body {
   background-color: #d0e2f2;
 }
@@ -39,6 +40,7 @@ img {
   width: 80px;
   height: 80px;
 }
+
 .full-page-loader .lds-dual-ring:after {
   content: " ";
   display: block;
@@ -50,6 +52,7 @@ img {
   border-color: #bcbcbc transparent #bcbcbc transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
@@ -59,8 +62,7 @@ img {
   }
 }
 
-/* form input */
-
+/* Form Input Styles */
 input:not([type="checkbox"]), textarea {
   border-color: #dfdfdf;
   background-color: #fdfcfb;
@@ -91,10 +93,10 @@ textarea {
   margin-top: 40px;
 }
 
-
 .form-control {
   margin: 20px 0;
 }
+
 .form-control label {
   display: block;
 }
@@ -103,13 +105,16 @@ textarea {
   display: flex;
   align-items: center;
 }
+
 .form-control-check label {
   flex: 1;
 }
+
 .form-control-check input {
   flex: 2;
   height: 20px;
 }
+
 .form-control input[type="checkbox"] {
   width: auto;
   flex: unset;
@@ -122,8 +127,7 @@ input:focus {
   outline: none;
 }
 
-/* button */
-
+/* Button Styles */
 .btn {
   display: inline-block;
   color: #fff;
@@ -140,16 +144,17 @@ input:focus {
 .btn:focus {
   outline: none;
 }
+
 .btn:active {
   transform: scale(0.98);
 }
+
 .btn-block {
   display: block;
   width: 100%;
 }
 
-/* container */
-
+/* Container Styles */
 .container {
   width: 1400px;
   max-width: 100%;
@@ -164,111 +169,104 @@ input:focus {
   box-shadow: 0px 4px 11px 0px rgb(0 0 0 / 14%);
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .container {
     padding: 60px 30px;
   }
-}
+  .container h1 {
+    font-size: 1.5em;
+  }
+  .container .header-btns {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+  .container .books-container {
+    margin-top: 30px;
+  }
 
-.container h1 {
-  margin-bottom: 20px;
-}
-.container .header-btns {
-  position: absolute;
-  top: 0;
-  right: 10px;
-}
+  .login-page .add-form {
+    width: 100%;
+    padding: 20px;
+  }
 
-.container a.active button.btn,
-.container .btn.active    {
-  background: #1cab47;
-  color: #fff;
-}
+  .container a.active button.btn,
+  .container .btn.active {
+    background: #1cab47;
+    color: #fff;
+  }
 
-.container button.btn {
-  margin-top: 0;
-  background: #e3e3e3;
-  color: #000;
-}
+  .container button.btn {
+    margin-top: 0;
+    background: #e3e3e3;
+    color: #000;
+  }
 
-.container button.btn.transparent {
-  background-color: transparent;
-  text-decoration: underline;
-}
+  .container button.btn.transparent {
+    background-color: transparent;
+    text-decoration: underline;
+  }
 
-.container .header-btns button.btn {
-  border-radius: 0 0 15px 15px;
-}
+  .container .header-btns button.btn {
+    border-radius: 0 0 15px 15px;
+  }
 
-.container .books-container {
-  margin-top: 50px;
-}
+  /* Table adjustments */
+  table th, table td {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
 
-/* table */
+  table.is-style-stripes tr:nth-child(odd) {
+    background-color: transparent !important;
+  }
 
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 30px;
-  width: 100%;
-  background-color: #fdfcfb;
-}
-table th,
-table td {
-  border-width: 0;
-  border-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  padding: 13px 30px;
-}
-table tr:first-child td,
-table tr:first-child th {
-  border-top-width: 1px;
-  border-top-style: solid;
-}
-table tr td:first-child,
-table tr th:first-child {
-  border-left-width: 1px;
-  border-left-style: solid;
-}
-table tr td:last-child,
-table tr th:last-child {
-  border-right-width: 1px;
-  border-right-style: solid;
-}
-table.is-style-stripes {
-  border-width: 0;
-  border-style: solid;
-}
-table.is-style-stripes tr:nth-child(odd) {
-  background-color: transparent !important;
-}
-
-table tr td,
-table tr th {
-  padding: 15px 30px;
-}
-table tr td,
-table tr th {
-  text-align: left;
-}
-
-
-
-
-@media (max-width: 768px) {
-  .books-list {
-    grid-template-columns: 1fr 1fr;
+  table tr td,
+  table tr th {
+    text-align: left;
   }
 }
 
+/* Mobile Specific Styles */
 @media (max-width: 576px) {
-  .books-list {
-    grid-template-columns: 1fr;
+  .container {
+    padding: 15px;
+    min-height: 200px;
+  }
+
+  .container h1 {
+    font-size: 1.2em;
+  }
+
+  .form-control input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+  }
+
+  .form-control input,
+  .form-control textarea {
+    font-size: 14px;
+    height: 40px;
+    padding: 0 15px;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .floating-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .login-page .add-form.login {
+    width: 100%;
+    padding: 15px;
   }
 }
-
 
 .login-page {
   height: 100vh;
@@ -287,7 +285,6 @@ table tr th {
 
 .login-page .login-type {
   text-align: center;
-
 }
 
 .login-page .add-form.login {
@@ -309,16 +306,17 @@ table tr th {
   cursor: pointer;
 }
 
-.login-page.container button.btn.selected    {
+.login-page.container button.btn.selected {
   background: #3e3e3e;
   color: #fff;
 }
 
-.login-page.container button.btn.login    {
+.login-page.container button.btn.login {
   background: #3e3e3e;
   color: #fff;
 }
 
+/* Header Styles */
 .header {
   display: flex;
   justify-content: space-between;
@@ -356,7 +354,7 @@ table tr th {
   right: 20px;
   width: 60px;
   height: 60px;
-  background-color: #00ff5e; /* Azul ou a cor de sua preferência */
+  background-color: #00ff5e;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -371,5 +369,5 @@ table tr th {
 }
 
 .floating-button:hover {
-  background-color: #00b339; /* Cor ao passar o mouse */
+  background-color: #00b339;
 }

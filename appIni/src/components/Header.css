@@ -1,35 +1,91 @@
 .header {
-    background-color: #3db097;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #3db097;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav button {
+  margin-right: 5px; /* Adicione margem entre os botões */
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+}
+
+.header-user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.header-user i {
+  margin-right: 10px;
+}
+
+.header-user button {
+  margin-left: 10px;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: flex-start; /* Alinha ao início */
   }
-  
+
   .header-nav {
-    display: flex;
+    flex-direction: column; /* Empilha os botões de navegação */
+    margin-bottom: 10px; /* Adiciona um espaço abaixo da navegação */
   }
-  
+
   .header-nav button {
-    margin-right: 5px; /* Adicione margem entre os botões */
+    margin-right: 0;
+    margin-bottom: 5px; /* Adiciona espaçamento entre os botões */
   }
-  
+
   .header-user {
-    display: flex;
-    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    margin-top: 10px;
   }
-  
+
   .header-user img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 6px;
+    width: 25px; /* Reduz o tamanho da imagem */
+    height: 25px;
   }
-  
+
   .header-user i {
-    margin-right: 10px;
+    margin-right: 6px; /* Diminui a margem do ícone */
   }
-  
+
   .header-user button {
-    margin-left: 10px;
+    margin-left: 6px; /* Ajusta a margem do botão */
   }
+}
+
+/* Media Query para telas muito pequenas (celulares em modo retrato) */
+@media (max-width: 480px) {
+  .header {
+    padding: 8px; /* Diminui o padding para telas muito pequenas */
+  }
+
+  .header-nav button {
+    font-size: 14px; /* Diminui o tamanho da fonte dos botões */
+  }
+
+  .header-user img {
+    width: 20px; /* Reduz ainda mais o tamanho da imagem */
+    height: 20px;
+  }
+
+  .header-user i {
+    margin-right: 5px;
+  }
+}
